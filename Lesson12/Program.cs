@@ -7,7 +7,7 @@ class Program
         AutoService BestService = new AutoService("BestService", 123456);
         BestService.Print();
         Vehicle Transp = new Vehicle("BestService", 123456, "light", 4444444);
-        Transp.PrintReport();
+        Transp.Print();
         Wheels Teach1 = new Wheels("BestService", 123456, "rubber", 5555555);
         Car Schedule1 = new Car("BestService", 123456, "light", 4444444, 00010001);
     }
@@ -22,7 +22,7 @@ class AutoService
         Name = name;
         Id = id;
     }
-    public void Print()
+    public virtual void Print()
     {
         Console.WriteLine($"AutoService {Name}");
     }
@@ -39,7 +39,7 @@ class Vehicle : AutoService
         Number = number;
     }
 
-    public void PrintReport()
+    public void Print()
     {
         Console.WriteLine("Car " + Type + " number " + Number);
     }
