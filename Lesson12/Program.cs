@@ -15,8 +15,8 @@ class Program
 
 class AutoService
 {
-    string Name { get; set; }
-    int Id { get; set; }
+    string Name { get; set; }// since the property used as private field - no need use is as property, you can just use private field
+    int Id { get; set; }// you can just use private field
     public AutoService(string name, int id)
     {
         Name = name;
@@ -30,8 +30,8 @@ class AutoService
 class Vehicle : AutoService
 
 {
-    string Type { get; set; }
-    int Number { get; set; }
+    string Type { get; set; }// you can just use private field
+    int Number { get; set; }// you can just use private field
 
     public Vehicle(string name, int id, string type, int number) : base(name, id)
     {
@@ -48,8 +48,8 @@ class Vehicle : AutoService
     class Wheels : AutoService
 {
     DateTime DataOfManufacture;
-    string Matherial { get; set; }
-    int IdWheel { get; set; }
+    string Matherial { get; set; }// you can just use private field
+    int IdWheel { get; set; }// you can just use private field
 
     public Wheels(string name, int id, string matherial, int idWheel) : base(name, id)
     {
@@ -60,10 +60,11 @@ class Vehicle : AutoService
 
 class Car: Vehicle
 {
-    int Seria { get; set; }
+    int Seria { get; set; }// you can just use private field
 
     public Car(string name, int id, string type, int number, int seria) : base(name, id, type, number)
     {
         Seria = seria;
     }
 }
+//checked
